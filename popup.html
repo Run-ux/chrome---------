@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智能划词翻译助手</title>
+    <style>
+      body {
+        width: 300px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      .header {
+        background-color: #4285f4;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+
+      .title {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .content {
+        padding: 15px;
+      }
+
+      .feature-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 0 15px 0;
+      }
+
+      .feature-item {
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .feature-icon {
+        width: 24px;
+        height: 24px;
+        background-color: #4285f4;
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .feature-text {
+        font-size: 14px;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+      }
+
+      .btn {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.2s;
+      }
+
+      .btn-primary {
+        background-color: #4285f4;
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: #5c9aff;
+      }
+
+      .btn-secondary {
+        background-color: #f1f3f4;
+        color: #3c4043;
+      }
+
+      .btn-secondary:hover {
+        background-color: #e8eaed;
+      }
+
+      .status {
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 13px;
+        background-color: #f8f9fa;
+        color: #3c4043;
+      }
+
+      .api-status {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="title">智能划词翻译助手</h1>
+    </div>
+
+    <div class="content">
+      <ul class="feature-list">
+        <li class="feature-item">
+          <div class="feature-icon">译</div>
+          <div class="feature-text">划选文本后点击按钮进行翻译</div>
+        </li>
+        <li class="feature-item">
+          <div class="feature-icon">解</div>
+          <div class="feature-text">获取选中文本的详细解释</div>
+        </li>
+        <li class="feature-item">
+          <div class="feature-icon">右</div>
+          <div class="feature-text">右键菜单快速翻译或解释</div>
+        </li>
+      </ul>
+
+      <div class="status">
+        API状态: <span class="api-status" id="apiStatus">检查中...</span>
+      </div>
+
+      <div class="buttons">
+        <button class="btn btn-secondary" id="optionsBtn">设置</button>
+        <button class="btn btn-primary" id="helpBtn">使用帮助</button>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
